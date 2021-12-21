@@ -1,0 +1,42 @@
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.header {
+
+    background-color: rgb(117, 76, 57);
+}
+
+.caja {
+    width: 400px;
+    height: 500px;
+    border-radius: 10%;
+    background-color: khaki;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    margin-top: 5%;
+}
+
+.titulo {
+
+    color: rgb(107, 84, 33);
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.imagen {
+
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#contenido {
+    height: 1000px;
+    background-color: wheat;
+}
+.lore{
+margin-top: 40px;
+
+}

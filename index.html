@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>API DEL LOL</title>
+</head>
+
+<body>
+    <center>
+        <div class="header">
+            <img src="titulo.svg" class="logo">
+        </div>
+        <div id="contenido">
+        <div class="container text-center" >
+            <br><br>
+            <form onsubmit="controlarSubmit(event)" action="" method="post">
+                <label for="name">Nombre : </label> <input type="text" id="name" placeholder="nombre del personaje">
+                <button type="submit" class="btn btn-warning">Enviar</button>
+                <button type="submit" class="btn btn-danger">Reset</button>
+            </form>
+            <div id="personajes" class="container text-center">
+
+            </div>
+        </div>
+    </div>
+    </center>
+</body>
+
+</html>
+<script src="logica.js"></script>
