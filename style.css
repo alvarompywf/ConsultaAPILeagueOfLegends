@@ -5,14 +5,14 @@
 
 .header {
 
-    background-color: rgb(117, 76, 57);
+    background-color: rgb(112, 65, 65);
 }
 
 .caja {
     width: 400px;
     height: 500px;
     border-radius: 10%;
-    background-color: khaki;
+    background-color: rgb(109, 93, 93);
     color: rgb(0, 0, 0);
     margin: auto;
     margin-top: 5%;
@@ -20,7 +20,8 @@
 
 .titulo {
 
-    color: rgb(107, 84, 33);
+    color: rgb(255, 255, 255);
+    text-shadow: 5mm;
     text-align: center;
     font-size: 30px;
 
@@ -33,10 +34,17 @@
 }
 
 #contenido {
-    height: 1000px;
+    height: 700px;
     background-color: wheat;
 }
-.lore{
-margin-top: 40px;
 
+.lore {
+    margin-top: 40px;
+color: honeydew;
+}
+
+.ataque {
+    margin-left: 10px;
+    text-align: left;
+    color: indianred;
 }
