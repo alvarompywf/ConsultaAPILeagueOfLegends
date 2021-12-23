@@ -1,18 +1,18 @@
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .header {
 
-    background-color: rgb(112, 65, 65);
+    background-color: rgb(25, 50, 138);
 }
 
 .caja {
     width: 400px;
     height: 500px;
     border-radius: 10%;
-    background-color: rgb(109, 93, 93);
+    background-color: rgb(81, 111, 214);
     color: rgb(0, 0, 0);
     margin: auto;
     margin-top: 5%;
@@ -34,8 +34,8 @@
 }
 
 #contenido {
-    height: 700px;
-    background-color: wheat;
+    height: 800px;
+    background-color: rgb(225, 220, 122);
 }
 
 .lore {
@@ -46,5 +46,5 @@ color: honeydew;
 .ataque {
     margin-left: 10px;
     text-align: left;
-    color: indianred;
+    color: rgb(255, 255, 255);
 }

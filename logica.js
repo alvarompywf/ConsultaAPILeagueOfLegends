@@ -1,4 +1,5 @@
 var personajes;
+var sustituido = true;
 
 function obtenerPersonajes() {
 
@@ -25,6 +26,9 @@ function controlarSubmit(event) {
         if (getInput == psj[1].name) {
             var lore = psj[1].blurb;
             var ataque = psj[1].info.attack;
+            var ataque = psj[1].info.attack;
+            var ataque = psj[1].info.attack;
+            var ataque = psj[1].info.attack;
 
             obtenerImagen(getInput, lore, ataque);
         }
@@ -50,13 +54,28 @@ function obtenerImagen(nombrePersonaje, lore, ataque) {
 }
 
 function borrar() {
-    var borrardiv = document.getElementById("contpersonajesainer").lastChild;
-    document.getElementById("personajes").removeChild(borrardiv);
-    
+
+    var divPsjs = document.querySelector("#personajes div");
+    divPsjs.remove();
 
 }
 
-function crearDiv(imageObjectURL, nombrePersonaje, lore,ataque) {//DOM
+function resetPage() {
+
+    var divPsjs = document.querySelector("#personajes div");
+
+    if (divPsjs != null) {// si hay algo se sustituye
+
+        divPsjs.remove();
+
+    }
+
+}
+
+
+function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque) {//DOM
+
+    resetPage();
 
     var divPersonajes = document.querySelector("#personajes");//obteniendo el div del html donde pondremos el contenido.
 
@@ -85,15 +104,24 @@ function crearDiv(imageObjectURL, nombrePersonaje, lore,ataque) {//DOM
 
     loreParr.appendChild(loreText);                     //Lo añadimos
     divCaja.appendChild(loreParr);
-    
+
     //  DOM del ataque, defensa , ...
-    var attackParr = document.createElement("p");  
+    var attackParr = document.createElement("p");
     attackParr.classList.add("ataque");
-    
+
     var attackText = document.createTextNode("att: " + ataque);
 
-    attackParr.appendChild(attackText);                     
+    attackParr.appendChild(attackText);
     divCaja.appendChild(attackParr);
+
+
+
+
+
+
+
 }
+
+
 
 window.onload = obtenerPersonajes();
