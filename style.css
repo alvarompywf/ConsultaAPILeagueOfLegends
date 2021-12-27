@@ -1,7 +1,6 @@
 .logo {
     width: 100px;
     height: 100px;
-
 }
 
 .imagen {
@@ -89,4 +88,40 @@
     margin-right: 70px;
     text-align: right;
     color: rgb(225, 220, 122);
+}
+
+.carta-box {
+
+    width: 400px;
+    height: 500px;
+
+}
+
+.carta-box:hover .carta {
+    transform: rotateY(180deg);
+}
+
+.carta {
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    /* aparece como escondido */
+}
+
+.cara.detras {
+    transform: rotateY(180deg);
+    width: 400px;
+    height: 500px;
+    border-radius: 10%;
+    background-color: rgb(81, 111, 214);
+    margin-top: 5%;
+}
+
+.carta-box {
+    display: block;
+    margin: auto;
 }
