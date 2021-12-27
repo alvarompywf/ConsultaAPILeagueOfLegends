@@ -69,20 +69,24 @@
 }
 
 .atYDef {
+    font-size: 0.5cm;
     margin-top: 0.5cm;
     margin-left: 70px;
     text-align: left;
-    color: rgb(255, 255, 255);
+    color: rgb(225, 220, 122);
 }
-.dif{
+
+.dif {
+    font-size: 0.5cm;
     margin-right: 70px;
     margin-top: -2.3cm;
     text-align: right;
-    color: rgb(255, 255, 255);
+    color: rgb(225, 220, 122);
 }
-.mag{
+
+.mag {
+    font-size: 0.5cm;
     margin-right: 70px;
-    
     text-align: right;
-    color: rgb(255, 255, 255);
+    color: rgb(225, 220, 122);
 }
