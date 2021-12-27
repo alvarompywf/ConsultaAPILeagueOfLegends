@@ -17,7 +17,7 @@ function controlarSubmit(event) {
     event.preventDefault();
 
     var getInput = event.target.name.value;
-
+    getInput = getInput[0].toUpperCase() + getInput.slice(1);
 
     Object.entries(personajes).map(psj => {
 
@@ -26,16 +26,16 @@ function controlarSubmit(event) {
         if (getInput == psj[1].name) {
             var lore = psj[1].blurb;
             var ataque = psj[1].info.attack;
-            var ataque = psj[1].info.attack;
-            var ataque = psj[1].info.attack;
-            var ataque = psj[1].info.attack;
-
+            // var ataque = psj[1].info.attack;
+            // var ataque = psj[1].info.attack;
+            // var ataque = psj[1].info.attack;
+            
             obtenerImagen(getInput, lore, ataque);
         }
 
 
     });
-
+    
     console.log(getInput);
     //return getInput;
     console.log(personajes);
@@ -113,11 +113,6 @@ function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque) {//DOM
 
     attackParr.appendChild(attackText);
     divCaja.appendChild(attackParr);
-
-
-
-
-
 
 
 }

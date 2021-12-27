@@ -1,10 +1,13 @@
 .logo {
     width: 100px;
     height: 100px;
+
 }
-
+.imagen{
+    align-content: center;
+}
 .header {
-
+    
     background-color: rgb(25, 50, 138);
 }
 
@@ -40,7 +43,7 @@
 
 .lore {
     margin-top: 40px;
-color: honeydew;
+    color: honeydew;
 }
 
 .ataque {

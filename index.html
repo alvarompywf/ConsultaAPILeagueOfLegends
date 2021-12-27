@@ -12,29 +12,31 @@
 </head>
 
 <body>
-    <center>
-        <div class="header">
+
+    <div class="header">
+        <div class="imagen">
             <img src="titulo.svg" class="logo">
         </div>
-        <div id="contenido">
-            <div class="container text-center">
-                <br><br>
-                <form onsubmit="controlarSubmit(event)" action="" method="post">
-                    <label for="name">Nombre : </label> <input type="text" id="name" placeholder="nombre del personaje">
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+    </div>
+    <div id="contenido">
+        <div class="container text-center">
+            <br><br>
+            <form onsubmit="controlarSubmit(event)" action="" method="post">
+                <label for="name">Nombre : </label> <input type="text" id="name" placeholder="nombre del personaje">
+                <button type="submit" class="btn btn-warning">LOOK THE CHARACTER!</button>
 
-                </form>
-                <form onsubmit="borrar()">
+            </form>
+            <form onsubmit="borrar()">
 
-                    <button type="submit" class="btn btn-danger">Reset</button>
-                </form>
+                <button type="submit" class="btn btn-danger">Reset</button>
+            </form>
 
-                <div id="personajes" class="container text-center">
+            <div id="personajes" class="container text-center">
 
-                </div>
             </div>
         </div>
-    </center>
+    </div>
+
 </body>
 
 </html>
