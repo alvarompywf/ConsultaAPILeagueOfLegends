@@ -8,22 +8,25 @@
 
     display: block;
     margin: auto;
-    padding-left:4% ;
+    padding-left: 4%;
 }
 
 .header {
     background-color: rgb(25, 50, 138);
 }
-#btnPersonaje{
+
+#btnPersonaje {
     margin-top: 0.5cm;
     width: 12cm;
-    height: 1cm; 
+    height: 1cm;
 }
-#name{
+
+#name {
     width: 12cm;
     height: 1cm;
     text-align: center;
 }
+
 #btnReset {
     width: 12cm;
     height: 1cm;
@@ -65,8 +68,21 @@
     color: honeydew;
 }
 
-.ataque {
-    margin-left: 10px;
+.atYDef {
+    margin-top: 0.5cm;
+    margin-left: 70px;
     text-align: left;
+    color: rgb(255, 255, 255);
+}
+.dif{
+    margin-right: 70px;
+    margin-top: -2.3cm;
+    text-align: right;
+    color: rgb(255, 255, 255);
+}
+.mag{
+    margin-right: 70px;
+    
+    text-align: right;
     color: rgb(255, 255, 255);
 }

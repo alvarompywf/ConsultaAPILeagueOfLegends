@@ -26,11 +26,11 @@ function controlarSubmit(event) {
         if (getInput == psj[1].name) {
             var lore = psj[1].blurb;
             var ataque = psj[1].info.attack;
-            // var ataque = psj[1].info.attack;
-            // var ataque = psj[1].info.attack;
-            // var ataque = psj[1].info.attack;
+             var defensa = psj[1].info.defense;
+             var dificultad = psj[1].info.difficulty;
+             var magia = psj[1].info.magic;
             
-            obtenerImagen(getInput, lore, ataque);
+            obtenerImagen(getInput, lore, ataque,defensa,dificultad,magia);
         }
 
 
@@ -41,14 +41,14 @@ function controlarSubmit(event) {
     console.log(personajes);
 }
 
-function obtenerImagen(nombrePersonaje, lore, ataque) {
+function obtenerImagen(nombrePersonaje, lore, ataque,defensa,dificultad,magia) {
 
 
     fetch(`http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/${nombrePersonaje}.png`)
         .then(response => response.blob())
         .then(imageBlob => {
             const imageObjectURL = URL.createObjectURL(imageBlob);
-            crearDiv(imageObjectURL, nombrePersonaje, lore, ataque);
+            crearDiv(imageObjectURL, nombrePersonaje, lore, ataque,defensa,dificultad,magia);
         });
 
 }
@@ -73,7 +73,7 @@ function resetPage() {
 }
 
 
-function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque) {//DOM
+function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque,defensa,dificultad,magia) {//DOM
 
     resetPage();
 
@@ -107,12 +107,34 @@ function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque) {//DOM
 
     //  DOM del ataque, defensa , ...
     var attackParr = document.createElement("p");
-    attackParr.classList.add("ataque");
+    attackParr.classList.add("atYDef");
+    
 
     var attackText = document.createTextNode("att: " + ataque);
 
     attackParr.appendChild(attackText);
     divCaja.appendChild(attackParr);
+    //defensa
+    var defensaParr = document.createElement("p");
+    
+
+    var defensaText = document.createTextNode("def: " + defensa);
+    defensaParr.classList.add("atYDef");
+    defensaParr.appendChild(defensaText);
+    divCaja.appendChild(defensaParr);
+    
+    //dificultad
+    var dificultadParr = document.createElement("p");
+    var dificultadText = document.createTextNode("dif: " + dificultad);
+    dificultadParr.classList.add("dif");
+    dificultadParr.appendChild(dificultadText);
+    divCaja.appendChild(dificultadParr);
+    //magia
+    var magiaParr = document.createElement("p");
+    var magiaText = document.createTextNode("mag: " + magia);
+    magiaParr.classList.add("mag");
+    magiaParr.appendChild(magiaText);
+    divCaja.appendChild(magiaParr);
 
 
 }
