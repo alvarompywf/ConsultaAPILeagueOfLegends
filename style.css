@@ -42,6 +42,12 @@
     margin-top: 5%;
 }
 
+.imagen2 {
+    width: 400px;
+    height: 500px;
+    border-radius: 10%;
+}
+
 .titulo {
 
     color: rgb(255, 255, 255);
@@ -112,7 +118,7 @@
     /* aparece como escondido */
 }
 
-.cara.detras {
+.cara.atras {
     transform: rotateY(180deg);
     width: 400px;
     height: 500px;
