@@ -120,10 +120,6 @@
 
 .cara.atras {
     transform: rotateY(180deg);
-    width: 400px;
-    height: 500px;
-    border-radius: 10%;
-    background-color: rgb(81, 111, 214);
     margin-top: 5%;
 }
 
