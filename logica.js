@@ -3,7 +3,7 @@ var sustituido = true;
 
 function obtenerPersonajes() {
 
-    fetch('http://ddragon.leagueoflegends.com/cdn/11.24.1/data/en_US/champion.json')
+    fetch('http://ddragon.leagueoflegends.com/cdn/11.24.1/data/es_ES/champion.json')
         .then(response => response.json())
         .then(data => {
             personajes = data.data;
