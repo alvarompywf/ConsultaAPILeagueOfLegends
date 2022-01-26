@@ -28,32 +28,22 @@ function controlarSubmit(event) {
 
         if (getInput == psj[1].name) {
 
-            var lore = psj[1].blurb;
-            var ataque = psj[1].info.attack;
-            var defensa = psj[1].info.defense;
-            var dificultad = psj[1].info.difficulty;
-            var magia = psj[1].info.magic;
-            
             obtenerImagenAtras(nombre);
-            obtenerImagen(getInput, lore, ataque, defensa, dificultad, magia);
-            
+            obtenerImagen(getInput);
+        
         }
 
     });
-
-    console.log(getInput);
-    //return getInput;
-    console.log(personajes);
+    
 }
 
-function obtenerImagen(nombrePersonaje, lore, ataque, defensa, dificultad, magia) {
-
+function obtenerImagen(nombrePersonaje,) {
 
     fetch(`http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/${nombrePersonaje}.png`)
         .then(response => response.blob())
         .then(imageBlob => {
             const imageObjectURL = URL.createObjectURL(imageBlob);
-            crearDiv(imageObjectURL, nombrePersonaje, lore, ataque, defensa, dificultad, magia);
+            crearDiv(imageObjectURL, nombrePersonaje);
         });
 
 }
@@ -66,7 +56,6 @@ function obtenerImagenAtras(nombrePersonaje) {
             const imageObjectURL2 = URL.createObjectURL(imageBlob2);
             cartaAtras(imageObjectURL2);
         });
-
 }
 
 function borrar() {
@@ -89,7 +78,7 @@ function resetPage() {
 }
 
 
-function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque, defensa, dificultad, magia) {//DOM
+function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
 
     resetPage();
 
@@ -114,47 +103,6 @@ function crearDiv(imageObjectURL, nombrePersonaje, lore, ataque, defensa, dificu
     img.setAttribute("src", imageObjectURL);   //y la ruta de la imagen SRC
 
     divCaja.appendChild(img);                       //se lo añadimos a la caja
-
-    var loreParr = document.createElement("p");    //creamos una etiqueta <p></p> para añadir el lore
-    loreParr.classList.add("lore");               //le creo una class para poder modificarlo
-
-    var loreText = document.createTextNode("LORE/HISTORIA : " + lore); //creamos el texto obteniendolo de la API
-
-    loreParr.appendChild(loreText);                     //Lo añadimos
-    divCaja.appendChild(loreParr);
-
-    //  DOM del ataque, defensa , ...
-    var attackParr = document.createElement("p");
-    attackParr.classList.add("atYDef");
-
-
-    var attackText = document.createTextNode("att: " + ataque);
-
-    attackParr.appendChild(attackText);
-    divCaja.appendChild(attackParr);
-    //defensa
-    var defensaParr = document.createElement("p");
-
-
-    var defensaText = document.createTextNode("def: " + defensa);
-    defensaParr.classList.add("atYDef");
-    defensaParr.appendChild(defensaText);
-    divCaja.appendChild(defensaParr);
-
-    //dificultad
-    var dificultadParr = document.createElement("p");
-    var dificultadText = document.createTextNode("dif: " + dificultad);
-    dificultadParr.classList.add("dif");
-    dificultadParr.appendChild(dificultadText);
-    divCaja.appendChild(dificultadParr);
-    //magia
-    var magiaParr = document.createElement("p");
-    var magiaText = document.createTextNode("mag: " + magia);
-    magiaParr.classList.add("mag");
-    magiaParr.appendChild(magiaText);
-    divCaja.appendChild(magiaParr);
-
-
 
 }
 function resetPageAtras() {

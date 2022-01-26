@@ -42,11 +42,6 @@
     margin-top: 5%;
 }
 
-.imagen2 {
-    width: 400px;
-    height: 500px;
-    border-radius: 10%;
-}
 
 .titulo {
 
@@ -66,64 +61,4 @@
 #contenido {
     height: 800px;
     background-color: rgb(225, 220, 122);
-}
-
-.lore {
-    margin-top: 40px;
-    color: honeydew;
-}
-
-.atYDef {
-    font-size: 0.5cm;
-    margin-top: 0.5cm;
-    margin-left: 70px;
-    text-align: left;
-    color: rgb(225, 220, 122);
-}
-
-.dif {
-    font-size: 0.5cm;
-    margin-right: 70px;
-    margin-top: -2.3cm;
-    text-align: right;
-    color: rgb(225, 220, 122);
-}
-
-.mag {
-    font-size: 0.5cm;
-    margin-right: 70px;
-    text-align: right;
-    color: rgb(225, 220, 122);
-}
-
-.carta-box {
-
-    width: 400px;
-    height: 500px;
-
-}
-
-.carta-box:hover .carta {
-    transform: rotateY(180deg);
-}
-
-.carta {
-    transform-style: preserve-3d;
-    transition: 1s;
-}
-
-.cara {
-    position: absolute;
-    backface-visibility: hidden;
-    /* aparece como escondido */
-}
-
-.cara.atras {
-    transform: rotateY(180deg);
-    margin-top: 5%;
-}
-
-.carta-box {
-    display: block;
-    margin: auto;
 }
