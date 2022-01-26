@@ -24,11 +24,27 @@
         <div class="container text-center">
             <br><br>
             <!-- FORMULARIO -->
+
             <form onsubmit="controlarSubmit(event)" action="" method="post">
                 <label for="name"></label> <input type="text" id="name" placeholder="Write here!">
                 <br>
+                <label for="seleccionarRol">Rol</label>
+                <select id="selectRol" name="selectRol" class="form-select">
+                    <option selected value="">Seleccione Rol</option>
+                    <option value="Tank">Tanque</option>
+                    <option value="Fighter">Luchador</option>
+                    <option value="Mage">Mago</option>
+                    <option value="Support">Support</option>
+                    <option value="Marksman">ADC</option>
+                    <option value="Assassin">Asesino</option>
+                </select>
+                <br>
                 <button type="submit" class="btn btn-primary" id="btnPersonaje">LOOK THE CHARACTER!</button>
             </form>
+
+
+
+
             <form onsubmit="borrar()">
                 <button type="submit" class="btn btn-danger" id="btnReset">Reset ⚠</button>
             </form>
