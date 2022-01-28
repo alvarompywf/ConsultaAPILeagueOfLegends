@@ -1,14 +1,15 @@
 var personajes;
+
 var sustituido = true;
 
-function obtenerPersonajes() {
-
-    fetch('http://ddragon.leagueoflegends.com/cdn/11.24.1/data/es_ES/champion.json')
+async function obtenerPersonajes() {
+    await fetch('http://ddragon.leagueoflegends.com/cdn/11.24.1/data/es_ES/champion.json')
         .then(response => response.json())
-        .then(data => {
-            personajes = data.data;
-            console.log(data.data);
-        });
+        .then(data => personajes = data.data);
+
+console.log(personajes)
+        
+introducirEnElSelect();
 
 }
 
@@ -34,6 +35,7 @@ function controlarSubmit(event) {
         }
 
     });
+
     
 }
 
@@ -135,6 +137,23 @@ function cartaAtras(imageObjectURL) {
 
     divDetras.appendChild(img);
 
+}
+
+function introducirEnElSelect() {
+
+    //obtenemos el select vacio  
+
+    var selectPsjs = document.querySelector("#selectPorNombre");
+
+    console.log(personajes);
+    Object.entries(personajes).map(psj => {//vamos rellenando el select creando options con todos los personajes 
+        var option = document.createElement("option");
+        option.setAttribute("id", psj[1].name);
+        option.setAttribute("name", psj[1].name);
+        option.setAttribute("value", psj[1].name);
+        option.innerText = psj[1].name;
+        selectPsjs.appendChild(option);// se rellena aquí 
+    });
 }
 
 
