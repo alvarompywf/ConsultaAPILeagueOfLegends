@@ -7,7 +7,6 @@ function agregarEventos() {
 
     let select = document.querySelector("#selectPorNombre");
     select.addEventListener("change", controlarSelect);
-    
 
 }
 
@@ -58,6 +57,7 @@ function controlarSubmit(event) {
 
 }
 
+
 function controlarSelect(event) {
     let select = document.querySelector("#selectPorNombre");
     event.preventDefault();
@@ -88,6 +88,7 @@ function obtenerImagen(nombrePersonaje) {
 }
 
 
+
 function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
 
     resetPage();
@@ -112,6 +113,50 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     img.setAttribute("src", imageObjectURL);   //y la ruta de la imagen SRC
 
     divCaja.appendChild(img);                       //se lo añadimos a la caja
+
+    insertarRisa(nombrePersonaje);
+    insertarFrase(nombrePersonaje);
+
+}
+
+function insertarRisa(nombrePersonaje) {
+
+    var risa = new Audio('sounds/laugh/' + nombrePersonaje + '.laugh1.wav');
+
+    console.log("INSERTAR AUDIO A --> " + nombrePersonaje)
+    let divCaja = document.querySelector(".caja");
+    let botonAudio = document.createElement("button");
+    botonAudio.setAttribute("class", "risa");
+    divCaja.appendChild(botonAudio);
+
+    let boton = document.querySelector(".risa");
+
+    boton.addEventListener("click", () => {
+        
+        risa.play();
+    
+    })
+
+}
+
+function insertarFrase(nombrePersonaje) {
+
+    var risa = new Audio('sounds/laugh/' + nombrePersonaje + '.laugh1.wav');
+
+    console.log("INSERTAR AUDIO A --> " + nombrePersonaje)
+    let divCaja = document.querySelector(".caja");
+    let botonAudio = document.createElement("button");
+    botonAudio.setAttribute("class", "frase");
+    divCaja.appendChild(botonAudio);
+
+    let boton = document.querySelector(".frase");
+
+    boton.addEventListener("click", () => {
+        
+        risa.play();
+    
+    })
+
 }
 
 function borrar() {
