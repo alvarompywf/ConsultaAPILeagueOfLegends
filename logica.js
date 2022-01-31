@@ -111,7 +111,7 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     var img = document.createElement("img");     //creamos una etiqueta imagen <img></img>
     img.classList.add("imagen");                //le añadimos una clase.
     img.setAttribute("src", imageObjectURL);   //y la ruta de la imagen SRC
-
+    img.setAttribute("alt", `imagen de ${nombrePersonaje}`)
     divCaja.appendChild(img);                       //se lo añadimos a la caja
 
     insertarRisa(nombrePersonaje);
@@ -132,9 +132,9 @@ function insertarRisa(nombrePersonaje) {
     let boton = document.querySelector(".risa");
 
     boton.addEventListener("click", () => {
-        
+
         risa.play();
-    
+
     })
 
 }
@@ -152,9 +152,9 @@ function insertarFrase(nombrePersonaje) {
     let boton = document.querySelector(".frase");
 
     boton.addEventListener("click", () => {
-        
+
         risa.play();
-    
+
     })
 
 }

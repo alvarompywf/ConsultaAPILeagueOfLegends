@@ -18,13 +18,13 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: rgb(235, 114, 114);
+    background-color: rgb(228, 78, 78);
 }
 .frase {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: rgb(114, 152, 235);
+    background-color: rgb(63, 118, 236);
 }
 
 #btnPersonaje {
@@ -47,9 +47,9 @@
 
 .caja {
     width: 400px;
-    height: 500px;
+    height: 300px;
     border-radius: 10%;
-    background-color: rgb(81, 111, 214);
+    background-color: rgb(120, 145, 226);
     color: rgb(0, 0, 0);
     margin: auto;
     margin-top: 5%;
