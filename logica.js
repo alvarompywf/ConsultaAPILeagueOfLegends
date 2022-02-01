@@ -30,9 +30,9 @@ function introducirEnElSelect() {
 
     Object.entries(personajes).map(psj => {//vamos rellenando el select creando options con todos los personajes 
         var option = document.createElement("option");
-        option.setAttribute("id", psj[1].name);
-        option.setAttribute("name", psj[1].name);
-        option.setAttribute("value", psj[1].name);
+        option.setAttribute("id", psj[1].id);
+        option.setAttribute("name", psj[1].id);
+        option.setAttribute("value", psj[1].id);
 
         option.innerText = psj[1].name;
         selectPsjs.appendChild(option);// se rellena aquí 
@@ -51,6 +51,10 @@ function controlarSubmit(event) {
     Object.entries(personajes).map(psj => {
 
         if (getInput == psj[1].name) {
+
+            getInput = psj[1].id;
+            
+
             obtenerImagen(getInput);
         }
     });
@@ -59,16 +63,19 @@ function controlarSubmit(event) {
 
 
 function controlarSelect(event) {
+
     let select = document.querySelector("#selectPorNombre");
+    
     event.preventDefault();
 
     var getSelect = this.options[select.selectedIndex].value;
 
     Object.entries(personajes).map(psj => {
 
-        if (getSelect == psj[1].name) {
+        if (getSelect == psj[1].id) {
+            
 
-            obtenerImagen(getSelect);
+            obtenerImagen(psj[1].id);
 
         }
 
@@ -77,12 +84,13 @@ function controlarSelect(event) {
 }
 
 function obtenerImagen(nombrePersonaje) {
-
+console.log("Nombre del personaje es line 85 "+nombrePersonaje)
     fetch(`http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/${nombrePersonaje}.png`)
         .then(response => response.blob())
         .then(imageBlob => {
             const imageObjectURL = URL.createObjectURL(imageBlob);
             crearDiv(imageObjectURL, nombrePersonaje);
+            
         });
 
 }
@@ -121,9 +129,9 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
 
 function insertarRisa(nombrePersonaje) {
 
-    var risa = new Audio('sounds/laugh/' + nombrePersonaje + '.laugh1.wav');
+    var risa = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
 
-    console.log("INSERTAR AUDIO A --> " + nombrePersonaje)
+    
     let divCaja = document.querySelector(".caja");
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "risa");
@@ -141,9 +149,8 @@ function insertarRisa(nombrePersonaje) {
 
 function insertarFrase(nombrePersonaje) {
 
-    var risa = new Audio('sounds/laugh/' + nombrePersonaje + '.laugh1.wav');
+    var frase = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
 
-    console.log("INSERTAR AUDIO A --> " + nombrePersonaje)
     let divCaja = document.querySelector(".caja");
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "frase");
@@ -153,7 +160,7 @@ function insertarFrase(nombrePersonaje) {
 
     boton.addEventListener("click", () => {
 
-        risa.play();
+        frase.play();
 
     })
 
