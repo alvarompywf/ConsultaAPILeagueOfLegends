@@ -10,6 +10,7 @@ function agregarEventos() {
 
 }
 
+// INPUT
 async function obtenerPersonajes() {
 
     await fetch('http://ddragon.leagueoflegends.com/cdn/11.24.1/data/es_ES/champion.json')
@@ -19,12 +20,37 @@ async function obtenerPersonajes() {
             console.log(personajes)
         });
 
+
     introducirEnElSelect();
     agregarEventos();
 }
 
-function introducirEnElSelect() {
 
+
+// SELECT-OPTION
+function controlarSelect(event) {
+    resetPage();
+    let select = document.querySelector("#selectPorNombre");
+
+    event.preventDefault();
+
+    var getSelect = this.options[select.selectedIndex].value;
+
+    Object.entries(personajes).map(psj => {
+
+        if (getSelect == psj[1].id) {
+
+
+            obtenerImagen(psj[1].id);
+
+        }
+
+    });
+
+}
+
+function introducirEnElSelect() {
+    resetPage();
     //obtenemos el select vacio  
     var selectPsjs = document.querySelector("#selectPorNombre");
 
@@ -42,55 +68,60 @@ function introducirEnElSelect() {
 
 function controlarSubmit(event) {
 
+    resetPage();
     event.preventDefault();
-
     var getInput = event.target.name.value;
 
-    getInput = getInput[0].toUpperCase() + getInput.slice(1);//poner la primera letra en mayusculas
+    const optionRol = event.target.selectRol.value;
+
+    if (getInput != "") {
+        getInput = getInput[0].toUpperCase() + getInput.slice(1);//poner la primera letra en mayusculas    
+    } if (optionRol !== "") {
+        let rolPersonaje = optionRol;
+        seleccionarRol(rolPersonaje);
+    }
+
 
     Object.entries(personajes).map(psj => {
 
         if (getInput == psj[1].name) {
 
             getInput = psj[1].id;
-            
 
             obtenerImagen(getInput);
         }
     });
 
+
+
 }
 
-
-function controlarSelect(event) {
-
-    let select = document.querySelector("#selectPorNombre");
-    
-    event.preventDefault();
-
-    var getSelect = this.options[select.selectedIndex].value;
+function seleccionarRol(rolPersonaje) {
+    resetPage();
 
     Object.entries(personajes).map(psj => {
+        if (psj[1].tags[0] === rolPersonaje) {
 
-        if (getSelect == psj[1].id) {
-            
+            let nombrePersonaje = psj[1].id;
 
-            obtenerImagen(psj[1].id);
+            obtenerImagen(nombrePersonaje);
+            console.log(psj[1]);
 
+        } else {
+            console.log(psj[1].id + " no es " + rolPersonaje)
         }
-
     });
-
 }
 
+
 function obtenerImagen(nombrePersonaje) {
-console.log("Nombre del personaje es line 85 "+nombrePersonaje)
+
+    console.log("Nombre del personaje es line 85 " + nombrePersonaje);
     fetch(`http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/${nombrePersonaje}.png`)
         .then(response => response.blob())
         .then(imageBlob => {
             const imageObjectURL = URL.createObjectURL(imageBlob);
             crearDiv(imageObjectURL, nombrePersonaje);
-            
         });
 
 }
@@ -98,8 +129,6 @@ console.log("Nombre del personaje es line 85 "+nombrePersonaje)
 
 
 function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
-
-    resetPage();
 
     var divPersonajes = document.getElementById("personajes");//obteniendo el div del html donde pondremos el contenido.
 
@@ -131,7 +160,7 @@ function insertarRisa(nombrePersonaje) {
 
     var risa = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
 
-    
+
     let divCaja = document.querySelector(".caja");
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "risa");
