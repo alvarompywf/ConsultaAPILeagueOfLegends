@@ -178,7 +178,7 @@ function insertarRisa(nombrePersonaje) {
 
 function insertarFrase(nombrePersonaje) {
 
-    var frase = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
+    var frase = new Audio(`sounds/jokes/${nombrePersonaje}.joke.wav`);
 
     let divCaja = document.querySelector(".caja");
     let botonAudio = document.createElement("button");
