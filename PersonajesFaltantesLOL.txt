@@ -1,89 +1,89 @@
-Aatrox
-Akshan
-Alistar
-Amumu
-Anivia
-Annie
-Aphelios
-Ashe
-Aurelion Sol
-Azir
-Bardo
-Blitzcrank
-Braum
-Camille
-Cho'Gath
-Ekko
-Gangplank
-Garen
-Gnar
-Gwen
-Heimerdinger
-Illaoi
-Ivern
-Jarvan IV*
-Jhin
-Jinx
-Kai'Sa
-Kalista
-Karma(joke)
-Karthus
-Kassadin
-Katarina(joke)
-Kayle
-Kayn
-Kindred
-Kled
-Lee Sin
-Lillia
-Lissandra
-Lucian
-Maestro Yi*
-MonkeyKing*
-Morgana
-Nami
-Nasus
-Neeko
-Nunu*
-Orianna*
-Ornn
-Pyke
-Qiyana
-Quinn
-Rakan
-Rammus
-Rek'Sai
-Rell
-Samira
-Senna
-Seraphine
-Sett
-Shaco
-Singed
-Sivir
-Sona(joke)
-Sylas
-Tahm Kench
-Taliyah
-Taric
-Thresh
-Tryndamere
-Twisted Fate*
-Twitch
-Veigar
-Vel'koz
-Vex
-Vi(laugh)
-Viego
-Warwick
-Xayah
-Xerath
-XinZhao*
-Yasuo
-Yone
-Yuumi
-Zilean
-Zoe
+Aatrox-
+Akshan -
+Alistar -
+Amumu -
+Anivia -
+Annie -
+Aphelios -
+Ashe -
+Aurelion Sol -
+Azir -
+Bardo -
+Blitzcrank -
+Braum -
+Camille -
+Cho'Gath -
+Ekko -
+Gangplank-
+Garen-
+Gnar - 
+Gwen -
+Heimerdinger-
+Illaoi -
+Ivern-
+Jarvan IV*-
+Jhin -
+Jinx -
+Kai'Sa-
+Kalista -
+Karma(joke)-
+Karthus -
+Kassadin-
+Katarina(joke)-
+Kayle-
+Kayn -
+Kindred-
+Kled - 
+Lee Sin -
+Lillia -
+Lissandra -
+Lucian -
+Maestro Yi*-
+MonkeyKing*-
+Morgana -
+Nami -
+Nasus -
+Neeko -
+Nunu* - 
+Orianna* -
+Ornn-
+Pyke -
+Qiyana-
+Quinn -
+Rakan -
+Rammus-
+Rek'Sai-
+Rell -
+Samira -
+Senna -
+Seraphine -
+Sett -
+Shaco -
+Singed -
+Sivir -
+Sona(joke)-
+Sylas -
+Tahm Kench -
+Taliyah -
+Taric -
+Thresh - 
+Tryndamere -
+Twisted Fate*-
+Twitch -
+Veigar -
+Vel'koz -
+Vex -
+Vi(laugh)-
+Viego -
+Warwick-
+Xayah -
+Xerath -
+XinZhao* -
+Yasuo -
+Yone -
+Yuumi -
+Zilean -
+Zoe-
 
 
 
