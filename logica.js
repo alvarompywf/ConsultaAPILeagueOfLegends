@@ -75,10 +75,14 @@ function controlarSubmit(event) {
     const optionRol = event.target.selectRol.value;
 
     if (getInput != "") {
-        getInput = getInput[0].toUpperCase() + getInput.slice(1);//poner la primera letra en mayusculas    
+        
+        getInput = getInput[0].toUpperCase() + getInput.slice(1);//poner la primera letra en mayusculas   
+
     } if (optionRol !== "") {
+        
         let rolPersonaje = optionRol;
         seleccionarRol(rolPersonaje);
+    
     }
 
 
@@ -149,6 +153,9 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     img.classList.add("imagen");                //le añadimos una clase.
     img.setAttribute("src", imageObjectURL);   //y la ruta de la imagen SRC
     img.setAttribute("alt", `imagen de ${nombrePersonaje}`)
+    
+    divCaja.classList.add("col-2");
+    
     divCaja.appendChild(img);                       //se lo añadimos a la caja
 
     insertarRisa(nombrePersonaje);
@@ -159,7 +166,6 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
 function insertarRisa(nombrePersonaje) {
 
     var risa = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
-
 
     let divCaja = document.querySelector(".caja");
     let botonAudio = document.createElement("button");
