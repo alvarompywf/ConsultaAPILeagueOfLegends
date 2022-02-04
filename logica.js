@@ -139,6 +139,7 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     var divCaja = document.createElement("div");//creamos un div
     divCaja.classList.add("caja");             //Y le añadimos una clase
 
+    divCaja.setAttribute("id" , nombrePersonaje);
 
     var p = document.createElement("p");                 //creamos un <p></p> donde pondremos el titulo 
     var text = document.createTextNode(nombrePersonaje);//Obtenemos el texto del personaje
@@ -155,6 +156,7 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     img.setAttribute("alt", `imagen de ${nombrePersonaje}`)
     
     divCaja.classList.add("col-2");
+    divCaja.classList.add("mr-3");
     
     divCaja.appendChild(img);                       //se lo añadimos a la caja
 
@@ -167,33 +169,32 @@ function insertarRisa(nombrePersonaje) {
 
     var risa = new Audio(`sounds/laugh/${nombrePersonaje}.laugh1.wav`);
 
-    let divCaja = document.querySelector(".caja");
+    let divCaja = document.querySelector("div#" + nombrePersonaje);
+    console.log(divCaja);
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "risa");
-    divCaja.appendChild(botonAudio);
+    
 
-    let boton = document.querySelector(".risa");
-
-    boton.addEventListener("click", () => {
+    botonAudio.addEventListener("click", () => {
 
         risa.play();
 
     })
-
+    divCaja.appendChild(botonAudio);
 }
 
 function insertarFrase(nombrePersonaje) {
 
     var frase = new Audio(`sounds/jokes/${nombrePersonaje}.joke.wav`);
 
-    let divCaja = document.querySelector(".caja");
+    let divCaja = document.querySelector("div#" + nombrePersonaje);
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "frase");
     divCaja.appendChild(botonAudio);
 
-    let boton = document.querySelector(".frase");
 
-    boton.addEventListener("click", () => {
+
+    botonAudio.addEventListener("click", () => {
 
         frase.play();
 
