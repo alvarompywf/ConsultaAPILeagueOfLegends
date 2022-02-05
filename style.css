@@ -20,6 +20,7 @@
     border-radius: 50%;
     background-color: rgb(228, 78, 78);
 }
+
 .frase {
     height: 50px;
     width: 50px;
@@ -28,6 +29,7 @@
 }
 
 #btnPersonaje {
+
     margin-top: 0.5cm;
     width: 12cm;
     height: 1cm;
@@ -45,9 +47,20 @@
     margin-top: 0.5cm;
 }
 
+#personajes {
+    float: initial;
+    margin: auto;
+}
+
 .caja {
-    width: 400px;
-    height: 300px;
+
+    
+    min-width: 150px;
+    min-height: 300px;
+    
+    max-width: 150px;
+    max-height: 300px;
+    
     border-radius: 10%;
     background-color: rgb(120, 145, 226);
     color: rgb(0, 0, 0);
@@ -72,6 +85,8 @@
 }
 
 #contenido {
-    height: 800px;
+    min-height: 800px;
+    height: 100%;
+    display: flex;
     background-color: rgb(225, 220, 122);
 }

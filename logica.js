@@ -26,10 +26,9 @@ async function obtenerPersonajes() {
 }
 
 
-
 // SELECT-OPTION
 function controlarSelect(event) {
-    resetPage();
+
     let select = document.querySelector("#selectPorNombre");
 
     event.preventDefault();
@@ -40,7 +39,7 @@ function controlarSelect(event) {
 
         if (getSelect == psj[1].id) {
 
-
+            resetPage();
             obtenerImagen(psj[1].id);
 
         }
@@ -50,6 +49,7 @@ function controlarSelect(event) {
 }
 
 function introducirEnElSelect() {
+
     resetPage();
     //obtenemos el select vacio  
     var selectPsjs = document.querySelector("#selectPorNombre");
@@ -68,28 +68,27 @@ function introducirEnElSelect() {
 
 function controlarSubmit(event) {
 
-    resetPage();
     event.preventDefault();
     var getInput = event.target.name.value;
 
     const optionRol = event.target.selectRol.value;
 
     if (getInput != "") {
-        
+        resetPage();
         getInput = getInput[0].toUpperCase() + getInput.slice(1);//poner la primera letra en mayusculas   
 
     } if (optionRol !== "") {
-        
+        resetPage();
         let rolPersonaje = optionRol;
         seleccionarRol(rolPersonaje);
-    
+
     }
 
 
     Object.entries(personajes).map(psj => {
 
         if (getInput == psj[1].name) {
-
+            resetPage();
             getInput = psj[1].id;
 
             obtenerImagen(getInput);
@@ -101,20 +100,23 @@ function controlarSubmit(event) {
 }
 
 function seleccionarRol(rolPersonaje) {
-    resetPage();
+
 
     Object.entries(personajes).map(psj => {
         if (psj[1].tags[0] === rolPersonaje) {
 
+            resetPage();
             let nombrePersonaje = psj[1].id;
 
             obtenerImagen(nombrePersonaje);
+            
             console.log(psj[1]);
 
         } else {
             console.log(psj[1].id + " no es " + rolPersonaje)
         }
     });
+
 }
 
 
@@ -139,7 +141,7 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     var divCaja = document.createElement("div");//creamos un div
     divCaja.classList.add("caja");             //Y le añadimos una clase
 
-    divCaja.setAttribute("id" , nombrePersonaje);
+    divCaja.setAttribute("id", nombrePersonaje);
 
     var p = document.createElement("p");                 //creamos un <p></p> donde pondremos el titulo 
     var text = document.createTextNode(nombrePersonaje);//Obtenemos el texto del personaje
@@ -154,10 +156,10 @@ function crearDiv(imageObjectURL, nombrePersonaje) {//DOM
     img.classList.add("imagen");                //le añadimos una clase.
     img.setAttribute("src", imageObjectURL);   //y la ruta de la imagen SRC
     img.setAttribute("alt", `imagen de ${nombrePersonaje}`)
-    
+
     divCaja.classList.add("col-2");
     divCaja.classList.add("mr-3");
-    
+
     divCaja.appendChild(img);                       //se lo añadimos a la caja
 
     insertarRisa(nombrePersonaje);
@@ -173,7 +175,7 @@ function insertarRisa(nombrePersonaje) {
     console.log(divCaja);
     let botonAudio = document.createElement("button");
     botonAudio.setAttribute("class", "risa");
-    
+
 
     botonAudio.addEventListener("click", () => {
 
@@ -213,7 +215,7 @@ function resetPage() {
 
     var divPsjs = document.querySelector("#personajes div");
 
-    if (divPsjs != null) {// si hay algo se sustituye
+    if (divPsjs != null) {// si hay algo, se sustituye
 
         divPsjs.remove();
 
