@@ -48,23 +48,26 @@
 }
 
 #personajes {
-    float: initial;
-    margin: auto;
+
+    display:flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .caja {
 
-    
+
     min-width: 150px;
     min-height: 300px;
-    
+
     max-width: 150px;
     max-height: 300px;
-    
+
     border-radius: 10%;
     background-color: rgb(120, 145, 226);
     color: rgb(0, 0, 0);
-    margin: auto;
+
     margin-top: 5%;
 }
 
@@ -89,4 +92,24 @@
     height: 100%;
     display: flex;
     background-color: rgb(225, 220, 122);
+}
+
+#selectRol {
+    background-color: rgb(68, 68, 68);
+    color: white;
+
+    margin-top: 7px;
+    text-align: center;
+    width: 12cm;
+    height: 1cm;
+}
+
+#selectPorNombre {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    margin-top: 7px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 12cm;
+    height: 1cm;
 }

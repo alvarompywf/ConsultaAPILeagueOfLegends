@@ -27,9 +27,9 @@
             <form onsubmit="controlarSubmit(event)" action="" method="post">
                 <label for="name"></label> <input type="text" id="name" placeholder="Write here!">
                 <br>
-                <label for="seleccionarRol">Rol</label>
+                <label for="seleccionarRol"></label>
                 <select id="selectRol" name="selectRol" class="form-select">
-                    <option selected value="">Seleccione Rol</option>
+                    <option selected value="">ROL</option>
                     <option value="Tank">Tanque</option>
                     <option value="Fighter">Luchador</option>
                     <option value="Mage">Mago</option>
@@ -39,7 +39,7 @@
                 </select>
                 <br>
                 <select id="selectPorNombre" name="selectPorNombre" class="selectPorNombre">
-                    <option selected value="">Seleccione personaje</option>
+                    <option selected value="">PERSONAJE</option>
                 </select>
                 <br>
                 <button type="submit" class="btn btn-primary" id="btnPersonaje">LOOK THE CHARACTER!</button>
@@ -49,11 +49,11 @@
                 <button type="submit" class="btn btn-danger" id="btnReset">Reset ⚠️</button>
             </form>
 
+            <div class="center-block">
+                <div id="personajes" class="d-flex m-1 flex-wrap">
 
-            <div id="personajes" class="d-flex m-3 flex-wrap">
-
+                </div>
             </div>
-
 
 
         </div>

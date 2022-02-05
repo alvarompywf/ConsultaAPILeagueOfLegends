@@ -17,12 +17,12 @@ async function obtenerPersonajes() {
         .then(response => response.json())
         .then(data => {
             personajes = data.data
-            console.log(personajes)
+
         });
 
+        introducirEnElSelect();
+        agregarEventos();
 
-    introducirEnElSelect();
-    agregarEventos();
 }
 
 
@@ -90,7 +90,6 @@ function controlarSubmit(event) {
         if (getInput == psj[1].name) {
             resetPage();
             getInput = psj[1].id;
-
             obtenerImagen(getInput);
         }
     });
@@ -121,7 +120,7 @@ function seleccionarRol(rolPersonaje) {
 
 
 function obtenerImagen(nombrePersonaje) {
-
+    
     console.log("Nombre del personaje es line 85 " + nombrePersonaje);
     fetch(`http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/${nombrePersonaje}.png`)
         .then(response => response.blob())
@@ -129,7 +128,7 @@ function obtenerImagen(nombrePersonaje) {
             const imageObjectURL = URL.createObjectURL(imageBlob);
             crearDiv(imageObjectURL, nombrePersonaje);
         });
-
+        
 }
 
 
